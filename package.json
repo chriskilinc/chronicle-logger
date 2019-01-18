@@ -1,0 +1,15 @@
+{
+  "name": "chronicle-logger",
+  "version": "0.0.1",
+  "description": "For Chronicle Api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chronicle-api",
+    "logger"
+  ],
+  "author": "chriskilinc",
+  "license": "ISC"
+}
