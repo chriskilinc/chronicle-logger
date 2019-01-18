@@ -1,10 +1,10 @@
-export default class chronicleLogger {
+class chronicleLogger {
     constructor(_apiurl, _apikey){
         const apiurl = _apiurl;
         const apikey = _apikey;    
-    }
+    }   
 
-    createLog = function(_system, _payload, _severity ) {
+    createLog(_system, _payload, _severity ) {
         const dateFull = new Date(Date.now());
         //  Create Log    
         const log = {
@@ -18,10 +18,12 @@ export default class chronicleLogger {
         return log;
     }
 
-    publishLog = function(log) {
+    publishLog(log) {
         const apiUrl = `${apiUrl}/q?=key=${apikey}`;    //  https://chronicleapi.horoku.com/q?=xxxxxxxxxxxx
 
         //  POST to server containing chronicle-api
         fetch({url: apiurl, body: log, headers: { method: "POST"}});
     }
 }
+
+module.exports = chronicleLogger;
